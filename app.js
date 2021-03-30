@@ -3,6 +3,9 @@ var hbs = require('hbs')
 
 var app = express()
 
+var anh = require('path').join(__dirname, '/anh');
+app.use (express.static(anh));
+
 var bodyParser = require("body-parser");
 app.use(bodyParser.urlencoded({ extended: false})) //bodyParser dung de lay du lieu nguoi dung
 app.set('view engine','hbs')
